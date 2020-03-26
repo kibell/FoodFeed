@@ -32,7 +32,7 @@ return (
    <Router>
       {/* <Route exact path = "/" component = {LiveStream} /> */}
       <Route exact path = "/SignUp" component = {SignUp} />
-      <Route exact path ='/Login'  component={Login} /> 
+      <Route exact path ='/'  component={Login} /> 
       <Route  exact path="/recipes" component={Recipes} />
       <Route path = "/chat" component = {ChatRoom} />
        <Route exact path = "/settings" component = {Settings} />

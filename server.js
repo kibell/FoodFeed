@@ -5,15 +5,13 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 // const PORT2 = process.env.PORT2 || 3002;
 const Session = require("express-session");
 const middleware = require("connect-ensure-login");
 const flash = require("connect-flash");
 const FileStore = require("session-file-store")(Session);
 const path = require("path");
-const server = require("https").createServer(app);
-const io = require("socket.io").listen(server);
 const config = require("./config/media_config");
 const User = require("./routes/api/user");
 const Stream = require("./routes/api/streams");
@@ -26,24 +24,24 @@ io.on("connection", (socket) => {
   console.log("A USER CONNECTED!");
   
 
-  socket.on("disconnect", () => {
-    console.log("A USER DISCONNECTED")
-  })
+//   socket.on("disconnect", () => {
+//     console.log("A USER DISCONNECTED")
+//   })
 
-  socket.on("join", ({}, callback) => {
+//   socket.on("join", ({}, callback) => {
 
-    callback({msg: "Welcome!"});
-  })
+//     callback({msg: "Welcome!"});
+//   })
 
 
-  socket.on("sendMessage", (message, callback) =>{
-    console.log(socket.id);
-    console.log(message);
-    io.sockets.emit("sendMessage", {message: message, username: socket.id});
+//   socket.on("sendMessage", (message, callback) =>{
+//     console.log(socket.id);
+//     console.log(message);
+//     io.sockets.emit("sendMessage", {message: message, username: socket.id});
     
-  })
+//   })
 
-});
+// });
 
 // app.use(Session({
 //   store: new FileStore({
@@ -106,8 +104,8 @@ app.use('/signup', require('./routes/signup'));
 // });
 
 // Start the API server
-app.listen(PORT, function() {
-  console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
-});
+// app.listen(PORT, function() {
+//   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
+// });
 
 // NodeMediaServer.run(); 
