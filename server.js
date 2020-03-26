@@ -5,8 +5,8 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
-const PORT = process.env.PORT || 5001;
-const PORT2 = process.env.PORT2 || 3002;
+const PORT = process.env.PORT || 3001;
+// const PORT2 = process.env.PORT2 || 3002;
 const Session = require("express-session");
 const middleware = require("connect-ensure-login");
 const flash = require("connect-flash");
@@ -101,9 +101,9 @@ app.use('/login', require('./routes/login'));
 app.use('/signup', require('./routes/signup'));
 
 
-server.listen(PORT2, function() {
-  console.log(`🌎  ==> API Server now listening on PORT ${PORT2}!`);
-});
+// server.listen(PORT2, function() {
+//   console.log(`🌎  ==> API Server now listening on PORT ${PORT2}!`);
+// });
 
 // Start the API server
 app.listen(PORT, function() {
