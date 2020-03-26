@@ -45,12 +45,7 @@
   "bugs": {
     "url": "https://github.com/adam-verma/FoodFeed/issues"
   },
-  "homepage": "https://github.com/adam-verma/FoodFeed#readme",
+  "homepage": "https://github.com/adam-verma/FoodFeed#readme"
 
-  "config": {
-    "nuxt": {
-      "host": "0.0.0.0",
-      "port": "3000"
-    }
-   }
+  
 }
