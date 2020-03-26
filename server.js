@@ -87,9 +87,9 @@ app.use(passport.session());
 require("./config/passport");
 
 // Register app routes
-app.use("/api/viewers", viewers);
 
-app.use("/api/streamers", viewer);
+
+
 
 // app.use("/streams", Stream);
 app.use('/streams', require('./routes/api/streams'));
