@@ -19,9 +19,9 @@ const passport = require("./config/passport");
 const apiRoutes = require("./routes/api/recipes");
 const NodeMediaServer = require('./media_server.js');
 
-io.on("connection", (socket) => {
+// io.on("connection", (socket) => {
 
-  console.log("A USER CONNECTED!");
+//   console.log("A USER CONNECTED!");
   
 
 //   socket.on("disconnect", () => {
@@ -104,8 +104,6 @@ app.use('/signup', require('./routes/signup'));
 // });
 
 // Start the API server
-// app.listen(PORT, function() {
-//   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
-// });
-
-// NodeMediaServer.run(); 
+app.listen(PORT, function() {
+  console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
+});
