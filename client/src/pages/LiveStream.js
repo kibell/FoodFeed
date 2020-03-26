@@ -1,20 +1,20 @@
 
-import React  from "react";
-// import Navbar from "../components/NavBar-Start/index"
-// import Jumbotron from "../components"
-import LiveStreams from "../components/LiveStreams/index"
+// import React  from "react";
+// // import Navbar from "../components/NavBar-Start/index"
+// // import Jumbotron from "../components"
+// import LiveStreams from "../components/LiveStreams/index"
 
-const LiveStream = () => {
+// const LiveStream = () => {
 
-    return (
-        <React.Fragment>
-            <LiveStreams/>
-        </React.Fragment>
+//     return (
+//         <React.Fragment>
+//             <LiveStreams/>
+//         </React.Fragment>
     
-    )
+//     )
 
 
-}
+// }
 
 
-export default LiveStream
+// export default LiveStream

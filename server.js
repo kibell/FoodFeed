@@ -45,15 +45,15 @@ io.on("connection", (socket) => {
 
 });
 
-app.use(Session({
-  store: new FileStore({
-      path : 'server/sessions'
-  }),
-  secret: config.server.secret,
-  maxAge : Date().now + (60 * 1000 * 30),
-  resave : true,
-  saveUninitialized : false,
-}));
+// app.use(Session({
+//   store: new FileStore({
+//       path : 'server/sessions'
+//   }),
+//   secret: config.server.secret,
+//   maxAge : Date().now + (60 * 1000 * 30),
+//   resave : true,
+//   saveUninitialized : false,
+// }));
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -110,4 +110,4 @@ app.listen(PORT, function() {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });
 
-NodeMediaServer.run(); 
+// NodeMediaServer.run(); 
