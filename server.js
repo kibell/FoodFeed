@@ -15,7 +15,6 @@ const path = require("path");
 const server = require("https").createServer(app);
 const io = require("socket.io").listen(server);
 const config = require("./config/media_config");
-const viewer = require("./routes/api/Viewer");
 const User = require("./routes/api/user");
 const Stream = require("./routes/api/streams");
 const passport = require("./config/passport");
