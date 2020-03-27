@@ -105,7 +105,7 @@ app.use('/signup', require('./routes/signup'));
 //   console.log(`🌎  ==> API Server now listening on PORT ${PORT2}!`);
 // });
 
-// // Start the API server
-// app.listen(PORT, function() {
-//   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
-// });
+// Start the API server
+app.listen(PORT, function() {
+  console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
+});
